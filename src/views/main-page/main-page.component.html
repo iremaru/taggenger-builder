@@ -1,0 +1,78 @@
+<form *ngIf="tagInfo" [formGroup]="tagInfo" class="tag-form" action="">
+  <fieldset>
+    <!-- <label for="familyName">Tu nombre</label> -->
+    <legend>Product name</legend>
+    <input formControlName="familyName" type="text" placeholder="Fulanillo Menganez" value="Fulanillo Menganez">
+  </fieldset>
+
+  <fieldset>
+    <legend>Short description</legend>
+    <input class="input_large" formControlName="shortDescription" type="text" placeholder="Mr. Teach Leader">
+  </fieldset>
+
+  <fieldset>
+    <legend>Product size</legend>
+    <div class="product-size">
+      <div class="radio-group">
+        <div>
+          <input type="radio" formControlName="size" id="size_traineer" value="Traineer"  />
+          <label for="size_junior">Internship</label>
+        </div>
+        <div>
+          <input type="radio" formControlName="size" id="size_junior" value="Junior" checked />
+          <label for="size_junior">Junior</label>
+        </div>
+        <div>
+          <input type="radio" formControlName="size" id="size_mid" value="Mid" />
+          <label for="size_mid">Mid
+            <span class="text text_tooltip"></span>
+          </label>
+        </div>
+        <div>
+          <input type="radio" formControlName="size" id="size_senior" value="Senior"/>
+          <label for="size_senior">Senior</label>
+        </div>
+      </div>
+      <div class="measurement-group">
+        <label for="size_measurement">Unit of measurement</label>
+        <input type="text" id="input_measurement" placeholder="In Madness">
+      </div>
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Flavour</legend>
+    <input class="input_flavour" formControlName="flavor" type="text" placeholder="Backend">
+  </fieldset>
+  
+</form>
+
+<fieldset>
+  <legend>Price</legend>
+  <input [(ngModel)]="price" type="text" placeholder="20k">
+</fieldset>
+
+<fieldset>
+  <legend>Secret message</legend>
+  <input [(ngModel)]="qrText" type="text" placeholder="I'm a unicorn">
+  
+</fieldset>
+
+<div class="CTA">
+  <button class="btn_cta" (click)="setFormData()">Let's create that tag!</button>
+  
+</div>
+
+
+<hr>
+
+<div class="preview-room">
+  <app-rack-label-105 
+    familyName={{familyName}}
+    shortDescription={{shortDescription}}
+    size={{size}}
+    flavor={{flavor}}
+    qrText={{qrText}}
+    price={{price}}
+  />
+</div>

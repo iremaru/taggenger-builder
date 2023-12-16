@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.rack-label-small {
+  display: flex;
+  height: 35mm;
+  width: 105mm;
+  border: 1mm solid black;
+  border-top: none;
+  border-bottom: none;
+  padding: 1mm;
+
+  .text {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 9pt;
+    font-weight: 400;
+  }
+
+  .section_ {
+    &left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 50%;
+
+      .text_family {
+        font-weight: 900;
+        font-size: large;
+        text-transform: uppercase;
+      }
+
+      .qr-and-code {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .qr {
+          background-color: black;
+          height: 15mm;
+          width: 15mm;
+        }
+
+        .code {
+          background-color: black;
+          color: white;
+          padding: 1mm;
+        }
+      }
+    }
+
+    &right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 50%;
+      height: 100%;
+
+      .logo {
+        width: 15mm;
+        .text_logo {
+          font-size: 5pt;
+          font-weight: 700;
+          text-align: center;
+        }
+      }
+
+      .price {
+        .text_price {
+          font-weight: 900;
+          font-size: 26pt;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="rack-label-small">
+  <div class="section_left">
+    <p class="text text_family">{{ familyName }}</p>
+    <p class="text text_description">{{ shortDescription }}</p>
+    <p class="text text_info">
+      <span class="text text_size">{{ size }} </span>
+      <span class="text_color">{{ flavor }}</span>
+    </p>
+    <div class="qr-and-code">
+      <div class="qr">
+        <qrcode
+          [qrdata]="qrText"
+          [width]="68"
+          [errorCorrectionLevel]="'M'"
+        ></qrcode>
+      </div>
+      <div class="code">
+        <p>746.63N.63R</p>
+      </div>
+    </div>
+  </div>
+  <div class="section_right">
+    <div class="logo">
+      <img src="*" alt="logo" />
+      <p class="text text_logo">IKEA all right reserved</p>
+    </div>
+    <div class="price">
+      <p class="text text_price">
+        <span class="currency">€</span><span>{{ price }}</span>
+      </p>
+    </div>
+  </div>
+</div>

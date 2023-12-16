@@ -1,0 +1,13 @@
+/* Add application styles & imports to this file! */
+
+$main-color: rgb(12, 68, 114);
+$main-color-light: rgb(67, 116, 156);
+$main-color-contrast: aliceblue;
+
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $main-color;
+  text-align: center;
+}
