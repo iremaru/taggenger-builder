@@ -1,17 +1,20 @@
 <div class="rack-label-small">
   <div class="section_left">
-    <p class="text text_family">{{ familyName }}</p>
-    <p class="text text_description">{{ shortDescription }}</p>
+    <p class="text text_family">{{ familyName || 'Taggenger' }}</p>
+    <p class="text text_description">
+      {{ shortDescription || 'Your friendly Picacódigo' }}
+    </p>
     <p class="text text_info">
-      <span class="text text_size">{{ size }} </span>
-      <span class="text_color">{{ flavor }}</span>
+      <span class="text text_size">{{ size || 'Junior' }}</span>
+      <span class="text_color">{{ flavor || 'React fanboy' }}</span>
     </p>
     <div class="qr-and-code">
       <div class="qr">
         <qrcode
-          [qrdata]="qrText"
-          [width]="68"
+          [qrdata]="qrText || 'Nothing to see'"
+          [width]="65"
           [errorCorrectionLevel]="'M'"
+          [allowEmptyString]="true"
         ></qrcode>
       </div>
       <div class="code">
@@ -22,11 +25,15 @@
   <div class="section_right">
     <div class="logo">
       <img src="*" alt="logo" />
-      <p class="text text_logo">IKEA all right reserved</p>
+      <p class="text text_logo">
+        Nothing ©️ <br />
+        is real
+      </p>
     </div>
     <div class="price">
-      <p class="text text_price">
-        <span class="currency">€</span><span>{{ price }}</span>
+      <p id="priceText" class="text text_price">
+        <span>{{ price || '2' }}</span>
+        <span class="currency">{{ currency || '🍫' }}</span>
       </p>
     </div>
   </div>
