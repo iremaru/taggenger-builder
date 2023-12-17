@@ -5,7 +5,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "demo": {
+    "tagBuilder": {
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -32,6 +32,11 @@
             "outputPath": "dist/demo",
             "scripts": [],
             "styles": ["src/global_styles.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/"
+              ]
+            },
             "tsConfig": "src/tsconfig.app.json"
           }
         },
@@ -39,10 +44,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "development": {
-              "buildTarget": "demo:build:development"
+              "buildTarget": "tagBuilder:build:development"
             },
             "production": {
-              "buildTarget": "demo:build:production"
+              "buildTarget": "tagBuilder:build:production"
             }
           },
           "defaultConfiguration": "development"

@@ -19,6 +19,8 @@ export class MainPageComponent implements OnInit {
 
   @ViewChild('tag') tagNode!: ElementRef;
 
+  nameTooltiptext= "Tesssssssssssssssssssst"
+
   constructor() {}
 
   ngOnInit() {}

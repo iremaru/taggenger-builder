@@ -17,3 +17,13 @@ h1 {
   text-align: center;
   margin-top: 20px;
 }
+
+.custom-tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 9999;
+}
