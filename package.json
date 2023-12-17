@@ -12,6 +12,7 @@
     "@angular/router": "17.0.6",
     "angularx-qrcode": "^17.0.0",
     "eslint": "^8.56.0",
+    "html2canvas": "^1.4.1",
     "rxjs": "7.8.1",
     "sass": "^1.69.5",
     "tslib": "2.6.2",

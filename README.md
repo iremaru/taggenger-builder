@@ -1,3 +1,9 @@
-# taggenger-builder
+# Taggenger creator
 
-[Edit in Codeflow ⚡️](https://stackblitz.com/~/github.com/iremaru/taggenger-builder)
+## To Do
+
+- ⬜Tooltip directive
+- ⬜Tooltip texts
+- ⬜Placeholder texts
+- ⬜UtilsLibrary
+- ✅Generate Png

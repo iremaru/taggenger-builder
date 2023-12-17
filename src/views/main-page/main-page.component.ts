@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import html2canvas from 'html2canvas';
+
 
 @Component({
   selector: 'app-main-page',
@@ -15,7 +17,21 @@ export class MainPageComponent implements OnInit {
   price!: Event;
   currency!: Event;
 
+  @ViewChild('tag') tagNode!: ElementRef;
+
   constructor() {}
 
   ngOnInit() {}
+
+  downloadTag(){
+    const tag = this.tagNode.nativeElement;
+    html2canvas(tag).then( canvas => {
+      const imageName = this.familyName || 'taggenger'
+      const data  = canvas.toDataURL('image/png');
+      const link = document.createElement('a');
+      link.href = data;
+      link.download = `${imageName}_rack-label-105.png`;
+      link.click(); 
+    });
+  }
 }

@@ -51,17 +51,22 @@
       <legend>Secret message</legend>
       <input class="input_large" [(ngModel)]="qrText" type="text" placeholder="No even my mother know this but I'm seriously into tag things.">
     </fieldset>
+
+
+    <button class="btn_cta" (click)="downloadTag()" >Download Tag</button>
   </div>
   
   <div class="preview-room">
-    <app-rack-label-105 
-      familyName={{familyName}}
-      shortDescription={{shortDescription}}
-      size={{size}}
-      flavor={{flavor}}
-      qrText={{qrText}}
-      price={{price}}
-      currency={{currency}}
-    />
+    <div #tag>
+      <app-rack-label-105 
+        familyName={{familyName}}
+        shortDescription={{shortDescription}}
+        size={{size}}
+        flavor={{flavor}}
+        qrText={{qrText}}
+        price={{price}}
+        currency={{currency}}
+      />
+    </div>
   </div>
 </div>
