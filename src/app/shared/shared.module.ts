@@ -5,7 +5,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { TooltipDirective } from './tooltip/tooltip.directive';
 
 @NgModule({
-  imports: [CommonModule, QRCodeModule],
+  imports: [CommonModule, QRCodeModule,],
   exports: [RackLabel105Component, TooltipDirective],
   declarations: [RackLabel105Component, TooltipDirective],
 })

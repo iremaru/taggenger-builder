@@ -5,8 +5,8 @@ import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/
 })
 export class TooltipDirective {
 
-  @Input({required: true}) tooltipText!:string; 
-  
+  @Input({required: true}) tooltipText:string  = "No Text"; 
+
   private tooltipElement!:HTMLDivElement | null;
   private tooltipClasses = 'tooltip';
   private parentEl!: HTMLElement;
@@ -25,14 +25,14 @@ export class TooltipDirective {
 
   private showTooltip(){
     if(!this.tooltipElement){
-      this.parentEl = this.el.nativeElement;
+      this.parentEl = document.body;
       console.log('TOOLTIP GENERADO')
       this.tooltipElement = this.renderer.createElement('div');
       this.renderer.addClass(this.tooltipElement, this.tooltipClasses);
       this.renderer.appendChild(this.tooltipElement, this.renderer.createText(this.tooltipText));
       this.renderer.appendChild(this.parentEl, this.tooltipElement);
 
-      const targetPosition = this.parentEl.getBoundingClientRect();
+      const targetPosition = this.el.nativeElement.getBoundingClientRect();
       const tooltipPosition = this.tooltipElement?.getBoundingClientRect();
 
       const left = targetPosition.left + targetPosition.width / 2 - (tooltipPosition?.width ?? 1) / 2;

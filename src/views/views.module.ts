@@ -4,7 +4,6 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { SharedModule } from '../app/shared/shared.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { QRCodeModule } from 'angularx-qrcode';
-import { TooltipDirective } from '../app/shared/tooltip/tooltip.directive';
 
 @NgModule({
   imports: [
