@@ -1,0 +1,70 @@
+<div class="page">
+	<div class="tag-form">
+
+		<fieldset>
+			<legend>Product name</legend>
+			<input [(ngModel)]="familyName" type="text" placeholder="Fulanillo Menganez" value="Fulanillo Menganez"
+				appTooltip tooltipText="A Human readable name, please">
+		</fieldset>
+
+		<fieldset>
+			<legend>Short description</legend>
+			<input class="input_large" [(ngModel)]="shortDescription" type="text" placeholder="Mr. Teach Leader">
+		</fieldset>
+
+		<fieldset>
+			<legend>Product size</legend>
+			<div class="product-size">
+				<div>
+					<input type="radio" [(ngModel)]="size" id="size_traineer" value="Traineer" />
+					<label for="size_traineer" appTooltip
+						tooltipText="When you finish here, bring us coffee, please ">Internship</label>
+				</div>
+				<div>
+					<input type="radio" [(ngModel)]="size" id="size_junior" value="Junior" checked />
+					<label for="size_junior" appTooltip tooltipText="Hello, fellow work slave">Junior</label>
+				</div>
+				<div>
+					<input type="radio" [(ngModel)]="size" id="size_mid" value="Unicorn" />
+					<label for="size_mid" appTooltip tooltipText="Are you for real? Can I take you a photo?">Mid</label>
+				</div>
+				<div>
+					<input type="radio" [(ngModel)]="size" id="size_senior" value="Senior" />
+					<label for="size_senior" appTooltip
+						tooltipText="Lucky me! I have some questions! Can we talk for a while? Maybe a couple of hours?">Senior</label>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Flavour</legend>
+			<input class="input_flavour" [(ngModel)]="flavor" type="text" placeholder="Backend" appTooltip
+				tooltipText="Choose your poison">
+		</fieldset>
+
+		<fieldset class="input_double">
+			<legend>Price</legend>
+			<input class="imput_half" [(ngModel)]="price" type="text" placeholder="20k" appTooltip
+				tooltipText="Name your price">
+			<input class="imput_half" [(ngModel)]="currency" type="text" placeholder="🍫" appTooltip
+				tooltipText="Currency or species">
+		</fieldset>
+
+		<fieldset>
+			<legend>Secret message</legend>
+			<input class="input_large" [(ngModel)]="qrText" type="text"
+				placeholder="No even my mother know this but I'm seriously into tag things." appTooltip
+				tooltipText="I solemnly swear that I never gonna tell it to anyone">
+		</fieldset>
+
+
+		<button class="btn_cta" (click)="downloadTag()">Download Tag</button>
+	</div>
+
+	<div class="preview-room">
+		<div #tag>
+			<app-rack-label-105 familyName={{familyName}} shortDescription={{shortDescription}} size={{size}}
+				flavor={{flavor}} qrText={{qrText}} price={{price}} currency={{currency}} />
+		</div>
+	</div>
+</div>

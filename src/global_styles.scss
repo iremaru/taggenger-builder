@@ -1,29 +1,29 @@
-
 $main-color: rgb(12, 68, 114);
 $main-color-light: rgb(67, 116, 156);
 $main-color-contrast: aliceblue;
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
-  text-transform: uppercase;
-  font-weight: 900;
-  color: $main-color;
-  text-align: center;
-  margin-top: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: $main-color;
+	text-align: center;
+	margin-top: 20px;
 }
 
-.custom-tooltip {
-  position: absolute;
-  background-color: #333;
-  color: #fff;
-  padding: 8px;
-  border-radius: 4px;
-  font-size: 14px;
-  z-index: 9999;
+.tooltip {
+	position: absolute;
+	background-color: $main-color-light;
+	color: $main-color-contrast;
+	padding: 0 1em;
+	border-radius: 10px;
+	font-size: 10pt;
+	z-index: 3;
+	filter: drop-shadow(0 0 0.75em rgb(20, 123, 220)) opacity(50%);
 }
