@@ -22,6 +22,7 @@ export class RackLabel105Component implements OnInit, AfterViewInit, OnChanges {
 	@Input({ required: true }) qrText!: string;
 	@Input({ required: true }) currency!: string;
 	@Input({ required: true }) price!: string;
+	@Input({ required: true }) priceStyle!: string;
 
 	priceText!: HTMLElement;
 	priceText_DefaultFontSize = 36;

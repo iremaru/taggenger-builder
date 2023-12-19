@@ -10,8 +10,9 @@
 		</p>
 		<div class="qr-and-code">
 			<div class="qr">
-				<qrcode [qrdata]="qrText || 'Nothing to see'" [width]="60" [errorCorrectionLevel]="'M'"
-					[allowEmptyString]="true"></qrcode>
+				<qrcode [qrdata]="qrText || 'Nothing to see'" [width]="50" [errorCorrectionLevel]="'M'"
+					[allowEmptyString]="true" [margin]="0" [cssClass]="'tagqr'"
+					></qrcode>
 			</div>
 			<div class="code">
 				<p>746.63N.63R</p>
@@ -27,7 +28,7 @@
 				is real
 			</p>
 		</div>
-		<div class="price">
+		<div class="price bti">
 			<p id="priceText" class="text text_price">
 				<span>{{ price || '2' }}</span>
 				<span class="currency">{{ currency || '🍫' }}</span>

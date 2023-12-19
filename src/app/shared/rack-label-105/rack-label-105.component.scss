@@ -41,10 +41,19 @@
         height: 100%;
 
         .qr {
-          background-color: black;
+          background-color: aquamarine;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
           height: 15mm;
           width: 15mm;
-          //overflow: hidden;
+
+          .tagqr {
+            background-color: red;
+            display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          }
         }
 
         .code {
@@ -87,6 +96,35 @@
         align-items: flex-end;
         width: 150px;
         height: 50px;
+
+        &.bti{
+          position: relative;
+          background-color: $tag-color-price-bti-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 2mm;
+          margin-right: 2mm;
+          
+          
+          .text_price{
+            padding-left: 0.5em;
+          }
+          
+          &::before{
+            $border-wide: 5px;
+            content: ' ';
+            z-index: 99;
+            position: absolute;
+            border-right: $border-wide solid $tag-color-price-bti-border;
+            border-bottom: $border-wide solid $tag-color-price-bti-border;
+            //border-left: none;
+            bottom: Calc(0% - $border-wide);
+            right: Calc(0% - $border-wide);
+            top: $border-wide;
+            left: $border-wide;
+          }
+        }
 
         .text_price {
           font-weight: 900;

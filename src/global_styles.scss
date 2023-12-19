@@ -1,6 +1,9 @@
 $main-color: rgb(12, 68, 114);
 $main-color-light: rgb(67, 116, 156);
 $main-color-contrast: aliceblue;
+$tag-color-price-bti-box: rgb(248, 224, 7);
+//$tag-color-price-bti-border: color-Mix( in srgb, $tag-color-price-bti-box, rgb(255, 102, 0));
+$tag-color-price-bti-border: rgb(252, 198, 24);
 
 * {
 	box-sizing: border-box;
