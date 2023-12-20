@@ -49,11 +49,12 @@
 			<input class="imput_half" [(ngModel)]="currency" type="text" placeholder="🍫" appTooltip
 				tooltipText="Currency or species">
 			<div class="price_style">
-				<select [(ngModel)]="priceStyle" name="priceStyle" id="select_priceStyle">
-					<option selected value="priceStyle_regular">Regular</option>
-					<option value="priceStyle_bti">BTI</option>
+				<select #select_priceStyle [(ngModel)]="priceStyle"  name="priceStyle" id="select_priceStyle">
+					<option value="priceStyle_regular" >Regular</option>
+					<option value="priceStyle_bti" >BTI</option>
 				</select>
 			</div>
+			<input #btiColor *ngIf="select_priceStyle.value == 'priceStyle_bti'" type="color" value="#f8e007" (change)="changeBTIColor(btiColor.value)">
 		</fieldset>
 
 		<fieldset>

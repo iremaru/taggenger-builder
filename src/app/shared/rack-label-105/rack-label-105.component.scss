@@ -98,7 +98,7 @@
 
         &.bti{
           position: relative;
-          background-color: $tag-color-price-bti-box;
+          background-color: var(--btiColor);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -111,13 +111,15 @@
           }
           
           &::before{
+            $tag-color-price-bti-border: var(--btiColor, $tag-color-price-bti-box);
             $border-wide: 5px;
+
             content: ' ';
             z-index: 99;
             position: absolute;
-            border-right: $border-wide solid $tag-color-price-bti-border;
+            border-right: $border-wide solid adjust-hue($tag-color-price-bti-box, -80deg);;
             border-bottom: $border-wide solid $tag-color-price-bti-border;
-            //border-left: none;
+            //filter: hue-rotate(-120deg) brightness(75%) contrast(50%);
             bottom: Calc(0% - $border-wide);
             right: Calc(0% - $border-wide);
             top: $border-wide;

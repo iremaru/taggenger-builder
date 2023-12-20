@@ -15,7 +15,7 @@ export class MainPageComponent implements OnInit {
 	qrText!: Event;
 	price!: Event;
 	currency!: Event;
-	priceStyle!: Event;
+	priceStyle: Event | String = 'priceStyle_bti';
 
 	@ViewChild('tag') tagNode!: ElementRef;
 
@@ -35,5 +35,10 @@ export class MainPageComponent implements OnInit {
 			link.download = `${imageName}_rack-label-105.png`;
 			link.click();
 		});
+	}
+
+	changeBTIColor(newColor:string) {
+		console.log(newColor);
+		document.documentElement.style.setProperty("--btiColor", newColor)
 	}
 }
