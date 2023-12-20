@@ -48,6 +48,12 @@
 				tooltipText="Name your price">
 			<input class="imput_half" [(ngModel)]="currency" type="text" placeholder="🍫" appTooltip
 				tooltipText="Currency or species">
+			<div class="price_style">
+				<select [(ngModel)]="priceStyle" name="priceStyle" id="select_priceStyle">
+					<option selected value="priceStyle_regular">Regular</option>
+					<option value="priceStyle_bti">BTI</option>
+				</select>
+			</div>
 		</fieldset>
 
 		<fieldset>
@@ -64,7 +70,7 @@
 	<div class="preview-room">
 		<div #tag>
 			<app-rack-label-105 familyName={{familyName}} shortDescription={{shortDescription}} size={{size}}
-				flavor={{flavor}} qrText={{qrText}} price={{price}} currency={{currency}} priceStyle="normal"/>
+				flavor={{flavor}} qrText={{qrText}} price={{price}} currency={{currency}} priceStyle={{priceStyle}}/>
 		</div>
 	</div>
 </div>

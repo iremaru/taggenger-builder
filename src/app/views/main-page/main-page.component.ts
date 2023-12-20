@@ -15,6 +15,7 @@ export class MainPageComponent implements OnInit {
 	qrText!: Event;
 	price!: Event;
 	currency!: Event;
+	priceStyle!: Event;
 
 	@ViewChild('tag') tagNode!: ElementRef;
 

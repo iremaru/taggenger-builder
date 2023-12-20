@@ -28,8 +28,9 @@
 				is real
 			</p>
 		</div>
-		<div class="price bti">
-			<p id="priceText" class="text text_price">
+		
+		<div class="price" [ngClass]="{'bti': priceStyle == 'priceStyle_bti'}">
+			<p id="priceText" class="text text_price" >
 				<span>{{ price || '2' }}</span>
 				<span class="currency">{{ currency || '🍫' }}</span>
 			</p>
