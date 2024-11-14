@@ -111,13 +111,13 @@
           }
           
           &::before{
-            $tag-color-price-bti-border: var(--btiColor, $tag-color-price-bti-box);
+            $tag-color-price-bti-border: red;
             $border-wide: 5px;
 
             content: ' ';
             z-index: 99;
             position: absolute;
-            border-right: $border-wide solid adjust-hue($tag-color-price-bti-box, -80deg);;
+            border-right: $border-wide solid $tag-color-price-bti-border;
             border-bottom: $border-wide solid $tag-color-price-bti-border;
             //filter: hue-rotate(-120deg) brightness(75%) contrast(50%);
             bottom: Calc(0% - $border-wide);
